@@ -24,43 +24,43 @@ export default function Test() {
 const [url] = useState(sessionStorage.getItem('Email'));
 
     const Navigate = useNavigate()
-    useEffect(() => {
-        let isMounted = true;
+    // useEffect(() => {
+    //     let isMounted = true;
 
-        const Fetch = async () => {
-            setLoading(true)
-            try {
-                const res = await axios.post(`${apiUrl}/url/check_url/`,
-                    {
-                        url: sessionStorage.getItem('Email')
-                    },
-                    {
-                        headers: {
-                            'Content-Type': 'application/json',
-                            'accept': 'application/json',
-                        }
-                    }
-                );
+    //     const Fetch = async () => {
+    //         setLoading(true)
+    //         try {
+    //             const res = await axios.post(`${apiUrl}/url/check_url/`,
+    //                 {
+    //                     url: sessionStorage.getItem('Email')
+    //                 },
+    //                 {
+    //                     headers: {
+    //                         'Content-Type': 'application/json',
+    //                         'accept': 'application/json',
+    //                     }
+    //                 }
+    //             );
 
-                if (isMounted) {
-                    console.log(res)
-                    setData(res.data)
-                    setLoading(false)
-                }
-            } catch (error) {
-                if (isMounted) {
-                    setLoading(false)
-                    console.log(error)
-                    setError("Error while fetching data please try again")
-                }
-            }
-        };
-        Fetch();
+    //             if (isMounted) {
+    //                 console.log(res)
+    //                 setData(res.data)
+    //                 setLoading(false)
+    //             }
+    //         } catch (error) {
+    //             if (isMounted) {
+    //                 setLoading(false)
+    //                 console.log(error)
+    //                 setError("Error while fetching data please try again")
+    //             }
+    //         }
+    //     };
+    //     Fetch();
 
-        return () => {
-            isMounted = false;
-        };
-    }, []);
+    //     return () => {
+    //         isMounted = false;
+    //     };
+    // }, []);
 
 
     const HandleScreen = () => {
