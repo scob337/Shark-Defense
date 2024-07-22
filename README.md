@@ -17,7 +17,7 @@ Shark_Defense provides a straightforward method to assess the security posture o
 
 To get started with Shark_Defense:
 
-1. **Visit the website:** Access [Shark_Defense]([https://example.com](https://shark-defense.netlify.app/)) to use the tool.
+1. **Visit the website:** Access [Shark_Defense]([https://shark-defense.netlify.app/]) to use the tool.
 
 ## Technologies Used
 
