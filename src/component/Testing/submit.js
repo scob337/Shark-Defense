@@ -121,7 +121,7 @@ const SentMSG = ()=>{
     
   const channel = '#sharkdefense-support'; 
   
-
+    const token ='xoxp-7169341236582-7188641415025-7214064832645-d44cd9a7da5276a21fb3a4ac15c3280e';
     
     
     const sendMessage = async () => {
@@ -140,7 +140,7 @@ const SentMSG = ()=>{
           text: JSON.stringify(message)  // تحويل الكائن إلى نص
         }, {
           headers: {
-            'Authorization': `Bearer token`,
+            'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'
           }
         });
